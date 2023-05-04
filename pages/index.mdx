@@ -1,22 +1,25 @@
-import Image from "next/image";
 import { motion } from "framer-motion"
-import avatar_client from "@/public/avatar_client.webp"
 import createGlobe from 'cobe'
-import {useEffect, useRef} from "react";
+import {useEffect, useRef} from "react"; import {useRouter} from "next/router";
 
 export default function Home(){
     const canvasRef = useRef();
+    const router = useRouter()
     useEffect(() => {
         let phi = 0;
+        let width = 0;
+        const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth)
+        window.addEventListener('resize', onResize)
+        onResize()
         const globe = createGlobe(canvasRef.current, {
             devicePixelRatio: 2,
-            width: 600 * 2,
-            height: 600 * 2,
+            width: width * 2,
+            height: width * 2,
             phi: 0,
-            theta: 0.5,
+            theta: 0,
             dark: 1,
             diffuse: 1.2,
-            mapSamples: 16000,
+            mapSamples: 20000,
             mapBrightness: 6,
             baseColor: [0.3, 0.3, 0.3],
             markerColor: [0.1, 0.8, 1],
@@ -29,25 +32,25 @@ export default function Home(){
                 { location: [40.712784, -74.005941], size: 0.05 },
                 { location: [34.147785, -118.144515], size: 0.05 },
             ],
+            scale: 3,
+            offset: [0, width * 2 * 0.4 * 0.6],
             onRender: (state) => {
-                // Called on every animation frame.
-                // `state` will be an empty object, return updated params.
-                state.phi = phi;
-                phi += 0.01;
+                state.width = width * 2
+                state.height = width * 2 * 0.4
+                state.phi = phi
+                phi += 0.005
             }
-        });
-
-        return () => {
-            globe.destroy();
-        };
-    }, []);
+        })
+        setTimeout(() => canvasRef.current.style.opacity = '1')
+        return () => globe.destroy()
+    }, [])
     return <>
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="nx-mx-auto flex flex-col contents-center gap-20 nx-max-w-[90rem] nx-pl-[max(env(safe-area-inset-left),1.5rem)] nx-pr-[max(env(safe-area-inset-right),1.5rem)]"
         >
-            <div className="w-full py-20 text-center">
+            <div className="w-full py-20 pb-0 text-center">
                 <div className="mb-8">
                     <h1 className="text-7xl font-bold leading-none pb-7 text-gradient dark:text-gradient-dark">
                         Smarter decisions<br/> with Placedv AI.
@@ -57,29 +60,25 @@ export default function Home(){
                     </h3>
                 </div>
                 <div>
-                    <button className="button-primary-cta">
+                    <button className="button-primary-cta" onClick={() => router.push('/solutions/placedv-reporting')}>
                         Get started
                     </button>
                 </div>
-                {/*<div className="py-20">
-                    <div className="flex gap-6">
-                        <div>
-                            <Image className="rounded-full" src={avatar_client} alt="Ava Alimurong" height={70} width={70}/>
-                        </div>
-                        <div>
-                            <div className="mb-3">
-                                <div className="font-bold text-xl">Ava Alimurong <span className="text-gray-500 font-normal ml-2">Head of Technology at Zagana Inc.</span></div>
-                            </div>
-                            <div className="w-2/3 text-gray-300">
-                                "We're done integrating the app with your package. Thank you so much for the great help!"
-                            </div>
-                        </div>
-                    </div>
-                </div>*/}
-                <div className="w-full mt-10 flex flex-col items-center">
+                <div className="md:w-full w-64 mt-10 flex flex-col items-center" style={{
+                    width: '100%',
+                    aspectRatio: 1/.4,
+                    margin: 'auto',
+                    position: 'relative',
+                }}>
                     <canvas
                         ref={canvasRef}
-                        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            contain: 'layout paint size',
+                            opacity: 0,
+                            transition: 'opacity 1s ease',
+                        }}
                     />
                 </div>
             </div>
