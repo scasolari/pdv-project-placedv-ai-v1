@@ -10,7 +10,7 @@ function FooterLink({ href, children }) {
         "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition";
     if (href.startsWith("http")) {
         return (
-            <a href={href} className={classes}>
+            <a href={href} className={classes} target="_blank">
                 {children}
             </a>
         );
@@ -41,6 +41,9 @@ const navigation = {
     support: [
         { name: "GitHub", href: "https://github.com/scasolari/pdv-project-placedv-ai-v1" },
     ],
+    legal: [
+        { name: "Privacy Policy", href: "https://www.iubenda.com/privacy-policy/79657627/legal"}
+    ]
 };
 
 export function FooterContent() {
@@ -87,6 +90,16 @@ export function FooterContent() {
                                 <FooterHeader>Support</FooterHeader>
                                 <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
                                     {navigation.support.map((item) => (
+                                        <li key={item.name}>
+                                            <FooterLink href={item.href}>{item.name}</FooterLink>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="mt-12 md:!mt-0">
+                                <FooterHeader>Legal</FooterHeader>
+                                <ul role="list" className="mt-4 space-y-2 list-none ml-0">
+                                    {navigation.legal.map((item) => (
                                         <li key={item.name}>
                                             <FooterLink href={item.href}>{item.name}</FooterLink>
                                         </li>
