@@ -1,8 +1,13 @@
-import {BiCollapseAlt} from "react-icons/bi";
+import {BiPlanet} from "react-icons/bi";
 
 export default {
     docsRepositoryBase: 'https://github.com/scasolari/pdv-project-placedv-ai-v1',
-    logo: <span style={{fontWeight: 700, display: 'flex', gap: 5}}><BiCollapseAlt/> placedv AI</span>,
+    logo: <span style={{fontWeight: 700, display: 'flex', alignItems: 'center', gap: 10}}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+            <BiPlanet size={24}/>
+        </div>
+        Placedv AI
+    </span>,
     head: (
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />

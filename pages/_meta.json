@@ -21,6 +21,10 @@
       }
     }
   },
+  "research": {
+    "type": "page",
+    "title": "Research"
+  },
   "about": {
     "type": "page",
     "title": "About"
