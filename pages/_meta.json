@@ -21,6 +21,16 @@
       }
     }
   },
+  "models": {
+    "title": "Models",
+    "type": "menu",
+    "items": {
+      "placedv-neptune": {
+        "title": "Placedv Neptune",
+        "href": "/models/placedv-neptune"
+      }
+    }
+  },
   "research": {
     "type": "page",
     "title": "Research"
