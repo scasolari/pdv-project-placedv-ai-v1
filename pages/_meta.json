@@ -38,5 +38,10 @@
   "about": {
     "type": "page",
     "title": "About"
+  },
+  "confirm": {
+    "type": "page",
+    "title": "Confirm",
+    "display": "hidden"
   }
 }
