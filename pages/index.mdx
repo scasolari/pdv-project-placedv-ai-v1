@@ -17,13 +17,13 @@ export default function Home(){
         onResize()
         const globe = createGlobe(canvasRef.current, {
             devicePixelRatio: 2,
-            width: width * 2,
+            width: width * 4,
             height: width * 2,
             phi: 0,
             theta: 0,
             dark: 1,
             diffuse: 1.2,
-            mapSamples: 20000,
+            mapSamples: 30000,
             mapBrightness: 6,
             baseColor: [0.3, 0.3, 0.3],
             markerColor: [0.1, 0.8, 1],
@@ -69,25 +69,25 @@ export default function Home(){
                         Get started
                     </button>
                 </div>
-                <div className="md:w-full w-64 mt-10 flex flex-col items-center" style={{
-                    width: '100%',
-                    aspectRatio: 1/.4,
-                    margin: 'auto',
-                    position: 'relative',
-                }}>
-                    <canvas
-                        ref={canvasRef}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            contain: 'layout paint size',
-                            opacity: 0,
-                            transition: 'opacity 1s ease',
-                        }}
-                    />
-                </div>
             </div>
         </motion.div>
+        <div className="md:w-full w-64 mt-10 flex flex-col items-center" style={{
+            width: '100%',
+            aspectRatio: 1/.4,
+            margin: 'auto',
+            position: 'relative',
+        }}>
+            <canvas
+                ref={canvasRef}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    contain: 'layout paint size',
+                    opacity: 0,
+                    transition: 'opacity 1s ease',
+                }}
+            />
+        </div>
     </>
 }
 
