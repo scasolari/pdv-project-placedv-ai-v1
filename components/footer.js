@@ -6,8 +6,7 @@ import {useState} from "react";
 import {useRouter} from "next/router";
 
 function FooterLink({ href, children }) {
-    const classes =
-        "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition";
+    const classes = "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition";
     if (href.startsWith("http")) {
         return (
             <a href={href} className={classes} target="_blank">
@@ -169,7 +168,7 @@ function SubmitForm() {
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                     type="submit"
-                    className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md dark:bg-white dark:text-black sm:text-sm betterhover:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:betterhover:hover:bg-gray-300"
+                    className="flex items-center justify-center w-full px-4 py-2 font-medium text-white nx-bg-black border border-transparent rounded-md dark:bg-white dark:text-black sm:text-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:hover:bg-gray-300"
                 >
                     Subscribe
                 </button>
