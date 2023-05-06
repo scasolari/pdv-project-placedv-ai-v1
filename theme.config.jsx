@@ -23,14 +23,6 @@ export default {
     },
     footer: {
         component: Footer
-        // text: <div>
-        //     <p>
-        //         <span>{new Date().getFullYear()} © <a href="https://placedv.com" target="_blank">Placedv AI.</a></span>
-        //     </p>
-        //     <p>
-        //         <small>The Placedv AI is a group of open source developers.</small>
-        //     </p>
-        // </div>,
     },
     search: {
         placeholder: 'Search in Placedv AI...'

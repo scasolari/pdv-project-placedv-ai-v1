@@ -18,6 +18,10 @@
       "placedv-goofls": {
         "title": "Placedv Goofls",
         "href": "/solutions/placedv-goofls"
+      },
+      "placedv-copilot": {
+        "title": "Placedv Copilot",
+        "href": "/solutions/placedv-copilot"
       }
     }
   },
@@ -28,6 +32,10 @@
       "placedv-neptune": {
         "title": "Placedv Neptune",
         "href": "/models/placedv-neptune"
+      },
+      "placedv-saturn": {
+        "title": "Placedv Saturn",
+        "href": "/models/placedv-saturn"
       }
     }
   },

@@ -29,9 +29,11 @@ const navigation = {
     solutions: [
         { name: "Placedv Reporting", href: "/solutions/placedv-reporting" },
         { name: "Placedv Goofls", href: "/solutions/placedv-goofls" },
+        { name: "Placedv Copilot", href: "/solutions/placedv-copilot" },
     ],
     models: [
         { name: "Placedv Neptune", href: "/models/placedv-neptune" },
+        { name: "Placedv Saturn", href: "/models/placedv-saturn" },
     ],
     company: [
         { name: "About", href: "/about" },
@@ -119,7 +121,9 @@ export function FooterContent() {
 
                 <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
                     <div>
-                        <BiPlanet size={24}/>
+                        <div className="flex items-center gap-2">
+                            <BiPlanet size={24}/> Placedv AI
+                        </div>
                         <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
                             &copy; {new Date().getFullYear()} Placedv AI. All rights reserved.
                         </p>
