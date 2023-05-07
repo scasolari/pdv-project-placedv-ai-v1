@@ -26,5 +26,9 @@ export default {
     },
     search: {
         placeholder: 'Search in Placedv AI...'
+    },
+    sidebar: {
+        defaultMenuCollapseLevel: 1,
+        toggleButton: true,
     }
 }
