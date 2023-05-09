@@ -20,9 +20,10 @@ export default function App({ Component, pageProps }) {
         </p>
       </div>
     </>
+  } else {
+    return <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
   }
-  return <>
-    <Component {...pageProps} />
-    <Analytics />
-  </>
 }
