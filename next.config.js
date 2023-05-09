@@ -6,6 +6,10 @@ const withNextra = require('nextra')({
 
 const nextConfig = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US',
+  },
 }
 
 module.exports = withNextra(nextConfig)
