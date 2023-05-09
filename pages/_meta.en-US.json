@@ -39,13 +39,25 @@
       }
     }
   },
+  "who-we-are": {
+    "title": "Who we are",
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "About Placedv AI",
+        "href": "/who-we-are/about",
+        "type": "page"
+      },
+      "our-executives": {
+        "title": "Executives",
+        "href": "/who-we-are/executives",
+        "type": "page"
+      }
+    }
+  },
   "research": {
     "type": "page",
     "title": "Research"
-  },
-  "about": {
-    "type": "page",
-    "title": "About"
   },
   "confirm": {
     "type": "page",
