@@ -4,7 +4,7 @@ import {BiPlanet} from "react-icons/bi";
 import {BsStars} from "react-icons/bs";
 
 export default function App({ Component, pageProps }) {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "production") {
     return <>
       <div className="w-2/4 mx-auto mt-20">
         <div className="w-full flex justify-center gap-5">
