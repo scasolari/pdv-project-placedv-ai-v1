@@ -32,8 +32,7 @@ const navigation = {
         { name: "Placedv Copilot", href: "/solutions/placedv-copilot" },
     ],
     models: [
-        { name: "Placedv Neptune", href: "/models/placedv-neptune" },
-        { name: "Placedv Saturn", href: "/models/placedv-saturn" },
+        { name: "Placedv Neptune", href: "/models/placedv-neptune/overview" }
     ],
     company: [
         { name: "About", href: "/about" },
@@ -57,7 +56,7 @@ export function FooterContent() {
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="grid grid-cols-1 gap-8 xl:col-span-2">
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 md:gap-8">
-                            <div className="mt-12 md:!mt-0">
+                            {/*<div className="mt-12 md:!mt-0">
                                 <FooterHeader>Solutions</FooterHeader>
                                 <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
                                     {navigation.solutions.map((item) => (
@@ -66,7 +65,7 @@ export function FooterContent() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </div>*/}
                             <div className="mt-12 md:!mt-0">
                                 <FooterHeader>Models</FooterHeader>
                                 <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">

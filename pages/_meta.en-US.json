@@ -7,53 +7,19 @@
       "layout": "raw"
     }
   },
-  "solutions": {
-    "title": "Solutions",
-    "type": "menu",
-    "items": {
-      "placedv-reporting": {
-        "title": "Placedv Reporting",
-        "href": "/solutions/placedv-reporting"
-      },
-      "placedv-goofls": {
-        "title": "Placedv Goofls",
-        "href": "/solutions/placedv-goofls"
-      },
-      "placedv-copilot": {
-        "title": "Placedv Copilot",
-        "href": "/solutions/placedv-copilot"
-      }
-    }
-  },
   "models": {
     "title": "Models",
     "type": "menu",
     "items": {
       "placedv-neptune": {
         "title": "Placedv Neptune",
-        "href": "/models/placedv-neptune"
-      },
-      "placedv-saturn": {
-        "title": "Placedv Saturn",
-        "href": "/models/placedv-saturn"
+        "href": "/models/placedv-neptune/overview"
       }
     }
   },
-  "who-we-are": {
-    "title": "Who we are",
-    "type": "menu",
-    "items": {
-      "about": {
-        "title": "About Placedv AI",
-        "href": "/who-we-are/about",
-        "type": "page"
-      },
-      "our-executives": {
-        "title": "Executives",
-        "href": "/who-we-are/executives",
-        "type": "page"
-      }
-    }
+  "about": {
+    "type": "page",
+    "title": "About"
   },
   "research": {
     "type": "page",

@@ -1,0 +1,87 @@
+---
+title: 'Get Started'
+---
+
+# Get Started
+
+Placedv Neptune is an advanced AI model developed by Placedv AI. The following code demonstrates the integration of the Word2Vec model and provides an example of how to use it for question-answering tasks. Let's explore the key sections of the code.
+
+### Data Loading and Preprocessing
+
+```python
+import os
+import pandas as pd
+import numpy as np
+from gensim.models import KeyedVectors
+from gensim.utils import simple_preprocess
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import normalize
+
+# Load the pre-trained Word2Vec model
+model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+
+# Load the data from a CSV file or create an empty DataFrame
+if os.path.exists('model_reports_updated.csv'):
+    data = pd.read_csv('model_reports_updated.csv')
+else:
+    print("No model to load. Please run the training first.")
+    exit()
+
+# Extract title and content as word vectors
+data['title_tokens'] = data['title'].apply(simple_preprocess)
+data['content_tokens'] = data['content'].apply(simple_preprocess)
+
+def get_vector(words):
+    vectors = [model[word] for word in words if word in model]
+    if vectors:
+        return np.mean(vectors, axis=0)
+    else:
+        return np.zeros(model.vector_size)
+
+data['title_vector'] = data['title_tokens'].apply(get_vector)
+data['content_vector'] = data['content_tokens'].apply(get_vector)
+
+feedback_scores = {}
+```
+
+In this code snippet, the pre-trained Word2Vec model is loaded using the `KeyedVectors` class from the gensim library. The data is loaded from a CSV file, and the title and content are preprocessed using the `simple_preprocess` function. The `get_vector` function retrieves the word vectors for each word in the titles and contents.
+
+### Question-Answering
+
+```python
+def ask_question(question):
+    question_vector = get_vector(simple_preprocess(question))
+    title_similarities = cosine_similarity([question_vector], np.stack(data['title_vector'].values))
+    content_similarities = cosine_similarity([question_vector], np.stack(data['content_vector'].values))
+    question_feedback_scores = np.array([feedback_scores.get((question, title, content), 0) for title, content in zip(data['title'], data['content'])])
+    title_scores = title_similarities[0] + question_feedback_scores
+    content_scores = content_similarities[0] + question_feedback_scores
+    top_title_indices = np.argsort(title_scores)[-5:][::-1]
+    top_content_indices = np.argsort(content_scores)[-5:][::-1]
+    return top_title_indices, top_content_indices
+
+def main():
+    while True:
+        question = input("Ask a question (type 'exit' to quit): ")
+        if question.lower() == 'exit':
+            break
+        title_indices, content_indices = ask_question(question)
+        print(f"Answer: {data.loc[content_indices, 'content']}\n")
+
+if __name__ == "__main__":
+    main()
+```
+
+The `ask_question` function takes a user's question as input, computes the similarity scores between the question vector and the title/content vectors using cosine similarity, and combines them with feedback scores. The top-ranked titles and contents based on these scores are returned.
+
+The `main` function handles the user interaction loop, where the user can input questions and receive answers based on the Placedv Neptune model.
+
+By integrating and adapting this code into your application, you can leverage the power of Placedv Neptune to provide accurate and relevant answers to user questions using Word2Vec embeddings.
+
+Please note that the complete Placedv Neptune source code contains additional functionalities, such as handling user feedback and updating the knowledge base. These additional components contribute to the continuous improvement of the model's performance and relevance over time.
+
+
+
+
+
+
