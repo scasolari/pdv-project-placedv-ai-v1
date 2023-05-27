@@ -1,27 +1,24 @@
 import '../styles/globals.css'
 import { Analytics } from '@vercel/analytics/react';
-import {BiPlanet} from "react-icons/bi";
-import {BsStars} from "react-icons/bs";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
-  if (process.env.NODE_ENV === "production") {
-    return <>
-      <div className="w-2/4 mx-auto mt-20">
-        <div className="w-full flex justify-center gap-5">
-          <BiPlanet size={36}/> <BsStars size={36}/>
-        </div>
-        <div className="mt-10 text-center">
-          <h3 className="text-3xl font-medium">I&apos;m predicting...</h3>
-        </div>
-      </div>
-      <div className="w-2/4 mx-auto mt-20">
-        <p className="text-sm text-gray-500 text-center">
-          &copy; {new Date().getFullYear()} Placedv.
-        </p>
-      </div>
-    </>
-  }
   return <>
+    <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=5271653479`}/>
+    <Script
+        id=""
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8W1GB5H4DP', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+    />
     <Component {...pageProps} />
     <Analytics />
   </>
