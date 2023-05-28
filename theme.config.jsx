@@ -1,8 +1,9 @@
 import {BiPlanet} from "react-icons/bi";
 import {Footer} from "@/components/footer";
+import { OramaSearch } from '@orama/plugin-nextra'
 
 export default {
-    docsRepositoryBase: 'https://github.com/scasolari/pdv-project-placedv-ai-v1',
+    docsRepositoryBase: 'https://github.com/scasolari/pdv-project-placedv-ai-v1/blob/main',
     logo: <span style={{fontWeight: 700, display: 'flex', alignItems: 'center', gap: 10}}>
         <div style={{display: 'flex', alignItems: 'center'}}>
             <BiPlanet size={24}/>
@@ -25,10 +26,7 @@ export default {
         component: Footer
     },
     search: {
-        placeholder: 'Search in Placedv AI...'
-    },
-    i18n: [{
-        locale: 'en-US',
-        text: 'English'
-    }],
+        placeholder: 'Search in Placedv AI...',
+        // component: OramaSearch
+    }
 }
