@@ -25,6 +25,11 @@
     "type": "page",
     "title": "Research"
   },
+  "manifesto": {
+    "type": "page",
+    "title": "Manifesto",
+    "display": "hidden"
+  },
   "confirm": {
     "type": "page",
     "title": "Confirm",
