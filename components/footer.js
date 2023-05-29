@@ -37,6 +37,7 @@ const navigation = {
     company: [
         { name: "About", href: "/about" },
         { name: "Research", href: "/research" },
+        { name: "Manifesto", href: "/manifesto" },
     ],
     support: [
         { name: "GitHub", href: "https://github.com/scasolari/pdv-project-placedv-ai-v1" },
