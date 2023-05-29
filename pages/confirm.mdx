@@ -1,8 +1,19 @@
----
-title: 'Placedv - Confirm'
----
+import Script from "next/script";
 
 ### Thanks so much!
+
+<Script
+    id=""
+    strategy="afterInteractive"
+    dangerouslySetInnerHTML={{
+        __html: `
+           gtag('event', 'lead_newsletter', {
+            'app_name': 'lead_newsletter',
+            'screen_name': 'confirm'
+           });
+          `,
+    }}
+/>
 
 Keep an eye on your inbox for product updates and announcements from Placedv AI.
 
