@@ -8,15 +8,7 @@ export default function App({ Component, pageProps }) {
     console.log(process.env.NODE_ENV)
   }, [])
   return <>
-      {process.env.NODE_ENV === "development"
-          ? <>
-            <Component {...pageProps} />
-            <Analytics />
-          </>
-          : <>
-            <Component {...pageProps} />
-            <Analytics />
-          </>
-      }
+    <Component {...pageProps} />
+    <Analytics />
   </>
 }
