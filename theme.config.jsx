@@ -14,7 +14,7 @@ export default {
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta property="og:title" content="Placedv AI" />
-            <meta property="og:description" content="Placedv's AI-powered products for campaign management are backed by a global community of users. Join today to maximize ROI and make smarter decisions with AI technology." />
+            <meta property="og:description" content="Placedv AI is a dynamic research platform dedicated to advancing the frontiers of artificial intelligence, driving innovation, and pushing the boundaries of what AI can achieve."/>
             <title>Placedv AI</title>
         </>
     ),

@@ -8,7 +8,7 @@ Placedv Neptune is an advanced AI model developed by Placedv AI. The following c
 
 ### Data Loading and Preprocessing
 
-```python
+```python copy
 import os
 import pandas as pd
 import numpy as np
@@ -48,7 +48,7 @@ In this code snippet, the pre-trained Word2Vec model is loaded using the `KeyedV
 
 ### Question-Answering
 
-```python
+```python copy
 def ask_question(question):
     question_vector = get_vector(simple_preprocess(question))
     title_similarities = cosine_similarity([question_vector], np.stack(data['title_vector'].values))
