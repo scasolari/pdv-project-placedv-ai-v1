@@ -11,25 +11,25 @@ export default function BlogIndex({ more = "Read more" }) {
                 <h3>
                     <Link
                         href={page.route}
-                        style={{ color: "inherit", textDecoration: "none" }}
-                        className="block font-semibold mt-8 text-2xl "
+                        style={{textDecoration: "none" }}
+                        className="block font-semibold mt-8 text-xl text-black opacity-80 hover:opacity-100 dark:text-white"
                     >
                         {page.meta?.title || page.frontMatter?.title || page.name}
                     </Link>
                 </h3>
-                <p className="opacity-80 mt-6 leading-7">
+                <p className="opacity-80 mt-4 leading-7">
                     {page.frontMatter?.description}{" "}
                     <span className="inline-block">
-            <Link
-                href={page.route}
-                className="text-[color:hsl(var(--nextra-primary-hue),100%,50%)] underline underline-offset-2 decoration-from-font"
-            >
-              {more + " →"}
-            </Link>
-          </span>
+                        <Link
+                            href={page.route}
+                            className="text-[color:hsl(var(--nextra-primary-hue),100%,50%)] underline underline-offset-2 decoration-from-font"
+                        >
+                            {more + " →"}
+                        </Link>
+                    </span>
                 </p>
                 {page.frontMatter?.date ? (
-                    <p className="opacity-50 text-sm mt-6 leading-7">
+                    <p className="opacity-50 text-sm mt-4 leading-7">
                         {page.frontMatter.date}
                     </p>
                 ) : null}
