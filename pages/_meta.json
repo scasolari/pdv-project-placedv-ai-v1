@@ -19,11 +19,17 @@
   },
   "about": {
     "type": "page",
-    "title": "About"
+    "title": "About",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "research": {
     "type": "page",
-    "title": "Research"
+    "title": "Research",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "manifesto": {
     "type": "page",
