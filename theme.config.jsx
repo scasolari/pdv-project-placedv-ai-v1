@@ -16,6 +16,7 @@ export default {
             <meta property="og:title" content="Placedv AI" />
             <meta property="og:description" content="Placedv AI is a dynamic research platform dedicated to advancing the frontiers of artificial intelligence, driving innovation, and pushing the boundaries of what AI can achieve."/>
             <title>Placedv AI</title>
+            <link rel="icon" type="image/png" href="planet-regular.png"/>
         </>
     ),
     project: {
