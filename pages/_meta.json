@@ -28,11 +28,29 @@
   "manifesto": {
     "type": "page",
     "title": "Manifesto",
-    "display": "hidden"
+    "display": "hidden",
+    "theme": {
+      "typesetting": "article"
+    }
+  },
+  "people": {
+    "type": "page",
+    "title": "People",
+    "display": "hidden",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "confirm": {
     "type": "page",
     "title": "Confirm",
     "display": "hidden"
+  },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
   }
 }

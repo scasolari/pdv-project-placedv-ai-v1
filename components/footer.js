@@ -36,11 +36,13 @@ const navigation = {
     ],
     company: [
         { name: "About", href: "/about" },
+        /*{ name: "People", href: "/people" },*/
         { name: "Research", href: "/research" },
         { name: "Manifesto", href: "/manifesto" },
     ],
     support: [
-        { name: "GitHub", href: "https://github.com/scasolari/pdv-project-placedv-ai-v1" },
+        { name: "General Purpose", href: "https://github.com/scasolari/pdv-project-placedv-ai-v1/issues" },
+        { name: "Placedv Models", href: "https://github.com/placedv/pdv-models-support/issues" },
     ],
     legal: [
         { name: "Privacy Policy", href: "https://www.iubenda.com/privacy-policy/79657627/legal"}
@@ -166,7 +168,7 @@ function SubmitForm() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border-[#666666] dark:border-[#888888] w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border rounded-md appearance-none dark:text-white sm:text-sm dark:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:border-white focus:placeholder-gray-400"
+                className="border-[#666666] dark:border-[#666666] w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border rounded-md appearance-none dark:text-white sm:text-sm dark:bg-transparent focus:outline-none focus:ring-2  dark:focus:border-white focus:placeholder-gray-400"
                 placeholder="you@example.com"
             />
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">

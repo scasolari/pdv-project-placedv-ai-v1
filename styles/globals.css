@@ -6,6 +6,9 @@ html, body {
     font-size: 16px;
     font-weight: 500;
 }
+input, button {
+    font-weight: 500!important;
+}
 
 .text-gradient {
     color: #000000;
