@@ -12,7 +12,7 @@ export default function BlogIndex({ more = "Read more" }) {
                     <Link
                         href={page.route}
                         style={{textDecoration: "none" }}
-                        className="block font-semibold mt-8 text-xl text-black opacity-80 hover:opacity-100 dark:text-white duration-300"
+                        className="block font-semibold mt-8 text-xl text-black hover:underline!importnt dark:text-white duration-300"
                     >
                         {page.meta?.title || page.frontMatter?.title || page.name}
                     </Link>
