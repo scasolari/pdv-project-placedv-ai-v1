@@ -1,10 +1,35 @@
 ---
 title: 'People'
+searchable: false
 ---
+
+import {Cards, Card} from "nextra-theme-docs";
 
 # People
 
 ### Executives
-- [Micaela Masia](https://it.linkedin.com/in/micaela-masia-549600236) • Co-Founder & Head Of Research
-- [Sergio Casolari](https://www.linkedin.com/in/sergio-casolari-787598a8) • Founder & CTO
 
+<Cards num={3}>
+    <Card
+        image
+        arrow
+        title="Micaela Masia"
+        href="https://it.linkedin.com/in/micaela-masia-549600236"
+    >
+        <div className="px-4 pb-2">
+            <p className="text-xs">Co-Founder & Head Of Research</p>
+        </div>
+        <>![Micaela Masia](../public/micaela_masia.png)</>
+    </Card>
+    <Card
+        image
+        arrow
+        title="Sergio Casolari"
+        href="https://www.linkedin.com/in/sergio-casolari-787598a8"
+    >
+        <div className="px-4 pb-2">
+            <p className="text-xs">Founder & CTO</p>
+        </div>
+        <>![Sergio Casolari](../public/sergio_casolari.png)</>
+    </Card>
+</Cards>

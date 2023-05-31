@@ -5,7 +5,10 @@ const withNextra = require('nextra')({
 })
 
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    domains: ['badges.frapsoft.com'],
+  },
 }
 
 module.exports = withNextra(nextConfig)
