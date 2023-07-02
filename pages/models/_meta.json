@@ -3,5 +3,6 @@
     "type": "separator",
     "title": "Models"
   },
-  "placedv-neptune": "Placedv Neptune"
+  "placedv-neptune": "Placedv Neptune",
+  "placedv-gpt": "Placedv GPT"
 }

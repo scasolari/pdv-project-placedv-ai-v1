@@ -2,6 +2,7 @@ import {BiPlanet} from "react-icons/bi";
 import {Footer} from "@/components/footer";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
+import {OramaSearch} from "@orama/plugin-nextra";
 
 export default {
     docsRepositoryBase: 'https://github.com/scasolari/pdv-project-placedv-ai-v1/blob/main',
@@ -32,6 +33,6 @@ export default {
     },
     search: {
         placeholder: 'Search in Placedv AI...',
-        // component: OramaSearch
+        component: OramaSearch
     }
 }
