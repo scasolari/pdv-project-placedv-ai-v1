@@ -14,10 +14,6 @@
       "placedv-neptune": {
         "title": "Placedv Neptune",
         "href": "/models/placedv-neptune/overview"
-      },
-      "placedv-gpt": {
-        "title": "Placedv GPT",
-        "href": "/models/placedv-gpt/overview"
       }
     }
   },
