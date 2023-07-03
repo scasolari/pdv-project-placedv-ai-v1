@@ -58,5 +58,14 @@
     "theme": {
       "sidebar": false
     }
+  },
+  "admin": {
+    "title": "Admin",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "pagination": false,
+      "toc": false
+    }
   }
 }

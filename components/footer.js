@@ -4,6 +4,8 @@ import { ThemeSwitch } from "nextra-theme-docs";
 import {BiPlanet} from "react-icons/bi";
 import {useState} from "react";
 import {useRouter} from "next/router";
+import Image from "next/image";
+import open_source from "@/public/open-source.svg"
 
 function FooterLink({ href, children }) {
     const classes = "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition";
@@ -129,6 +131,9 @@ export function FooterContent() {
                         <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
                             &copy; {new Date().getFullYear()} Placedv AI. All rights reserved.
                         </p>
+                        <div className="mt-4">
+                            <Image src={open_source} alt={'Placedv AI'} width={118} height={18}/>
+                        </div>
                     </div>
                 </div>
             </div>

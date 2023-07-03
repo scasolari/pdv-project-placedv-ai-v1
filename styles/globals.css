@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Google+Sans:400,500,600,700|Google+Sans+Display:400|Roboto:400,500,600,700|Roboto+Mono:400&amp;display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +10,10 @@ html, body {
 }
 input, button {
     font-weight: 500!important;
+}
+
+.nextra-card, a {
+    text-decoration: none!important;
 }
 
 .text-gradient {
